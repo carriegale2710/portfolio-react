@@ -12,27 +12,32 @@ A customizable personal portfolio website built with React, TypeScript, and Tail
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/cupidbity/portfolio-template.git
 cd portfolio-template
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables
+
 ```bash
 cp .env.example .env
 ```
 
 4. Start the development server
+
 ```bash
 npm run dev
 ```
 
 5. Build for production
+
 ```bash
 npm run build
 ```
@@ -43,42 +48,46 @@ npm run build
 
 **Name & Title** — Update your name in these files:
 
-| File | What to change |
-|------|---------------|
-| `index.html` | Page `<title>` |
-| `src/components/section/Navigation.tsx` | Nav bar name and aria-label |
-| `src/components/section/About.tsx` | Hero greeting text (`AsciiMorphText`) |
-| `src/components/Footer.tsx` | Copyright name |
+| File                                    | What to change                        |
+| --------------------------------------- | ------------------------------------- |
+| `index.html`                            | Page `<title>`                        |
+| `src/components/section/Navigation.tsx` | Nav bar name and aria-label           |
+| `src/components/section/About.tsx`      | Hero greeting text (`AsciiMorphText`) |
+| `src/components/Footer.tsx`             | Copyright name                        |
 
 **Roles** — Edit the typewriter carousel roles in `src/components/section/About.tsx`:
+
 ```tsx
 const roles = [
-  'Software Engineer',
-  'Full-Stack Developer',
+  "Software Engineer",
+  "Full-Stack Developer",
   // Add your own roles
 ];
 ```
 
 ### 2. Profile Images
 
-Add your profile images to `src/assets/`:
+Add your profile images to `src/assets/profile`:
+
 - `profile1.jpg`
 - `profile2.jpg`
 - `profile3.jpg`
 
 Then uncomment the imports in `src/assets/index.ts`:
+
 ```ts
-import profile1 from './profile1.jpg';
-import profile2 from './profile2.jpg';
-import profile3 from './profile3.jpg';
+import profile1 from "./profile/profile1.jpg";
+import profile2 from "./profile/profile2.jpg";
+import profile3 from "./profile/profile3.jpg";
 ```
 
 Update the captions in `src/components/section/About.tsx`:
+
 ```tsx
 const profileImages = [
   { src: profile1, caption: "your caption" },
   { src: profile2, caption: "your caption" },
-  { src: profile3, caption: "your caption" }
+  { src: profile3, caption: "your caption" },
 ];
 ```
 
@@ -93,6 +102,7 @@ Place your resume PDF at `public/resume.pdf` — the Resume button in the About 
 ### 5. Social Links & Environment Variables
 
 Edit your `.env` file with your actual URLs:
+
 ```env
 VITE_GITHUB_URL=https://github.com/yourusername
 VITE_LINKEDIN_URL=https://linkedin.com/in/yourusername
@@ -109,6 +119,7 @@ These are consumed in `src/config/socialLinks.ts` — add more repository entrie
 ### 6. Projects
 
 **Gallery cards** — Edit the projects array in `src/components/section/Projects.tsx`:
+
 ```tsx
 {
   title: "Your Project",
@@ -121,12 +132,14 @@ These are consumed in `src/config/socialLinks.ts` — add more repository entrie
 ```
 
 **Project icons** — Add icon images to `src/assets/project_icons/` and register them in `src/assets/project_icons/index.ts`:
+
 ```ts
-import YourProjectIcon from './YourProjectIcon.webp';
+import YourProjectIcon from "./YourProjectIcon.webp";
 export { YourProjectIcon };
 ```
 
 **Project detail pages** — Create a detail page for each project at `src/pages/projects/YourProject.tsx`. Use the available components:
+
 - `ProjectLayout` — Page wrapper with dark mode theming
 - `ProjectHeader` — Icon, title, subtitle, GitHub link, feature grid
 - `ImageCarousel` — Screenshot carousel with navigation
@@ -137,6 +150,7 @@ export { YourProjectIcon };
 **Project snapshots** — Add screenshot images to `src/assets/project_snapshots/your-project/` and import them in `src/assets/index.ts`.
 
 **Routing** — Register your project pages in `src/App.tsx`:
+
 ```tsx
 const YourProject = lazy(() => import('./pages/projects/YourProject'))
 // ...
@@ -146,6 +160,7 @@ const YourProject = lazy(() => import('./pages/projects/YourProject'))
 ### 7. Experience
 
 Edit `src/components/section/Experience.tsx` with your work history:
+
 ```tsx
 {
   title: "Your Job Title",
@@ -161,6 +176,7 @@ Edit `src/components/section/Experience.tsx` with your work history:
 ### 8. Certifications
 
 Edit `src/components/section/Certifications.tsx` with your credentials. The section supports two types:
+
 - **Badges** (e.g., AWS) — with image, title, subtitle, and Credly URL
 - **Credentials** (e.g., CITI) — with image, title, issuer, dates, and credential ID/URL
 

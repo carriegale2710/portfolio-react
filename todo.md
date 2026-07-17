@@ -4,14 +4,14 @@ In progress
 
 - [ ] Finish customisation instruction on README
   - [x] Personal info
-  - [x] Social Links
   - [x] Resume
-  - [ ] Github Links
-  - [ ] Profile images
-  - [ ] Journal images
-  - [ ] Experience
+  - [x] Social Links
+  - [x] Github Links
   - [ ] Tech skills
+  - [ ] Experience
   - [ ] Projects
+  - [ ] Profile images
+  - [ ] Journal image
 
 Up Next
 
@@ -21,6 +21,13 @@ Up Next
 - [ ] Replace email button Contact Page with Contact Form instead (security)
 - [ ] Audit any bugs, slow loading or usability issues with lighthouse
 - [ ] Implement at least 2 project pages
+- [ ] Acknowledge cupidity credits for template in footer
+
+Known Issues (See FIXME anchors)
+
+- [ ] Profile Images not showing on the Notebook page, only on image view modal
+- [ ] AsciiMorphText not rendering fullAsciiArt properly?
+- [ ] Typewriter carousel starts to early - maybe hide until
 
 Bonus
 
@@ -30,6 +37,11 @@ Bonus
 - [ ] Customise star decorations
 - [ ] Customise animated stickers
 - [ ] Customise ASCII text
+- [ ] Draw a new favicon
 - [ ] Ideate new original features
 
 Feature Ideas
+
+- [ ] Custom cursor transitions/animations for hover and drag
+- [ ] Write about me section with storytelling to explain design-to-code journey
+  - [ ] Display a cartoon/pixel art persona character inspired by ema skye
