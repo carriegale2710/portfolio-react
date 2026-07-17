@@ -1,8 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import AsciiMorphText from "../AsciiMorphText";
-import TypewriterCarousel from "../TypewriterCarousel";
 import { useDarkMode } from "../../contexts/DarkModeContext";
 import { useThemeColors, withAlpha } from "../../hooks/useThemeColors";
 import {
@@ -13,63 +10,22 @@ import {
   profile3,
   stickers as stickerImages,
 } from "../../assets";
+import Hero from "./Hero";
 
 const About = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [asciiText, setAsciiText] = useState("");
   const [showProfileModal, setShowProfileModal] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const { isDarkMode } = useDarkMode();
   const themeColors = useThemeColors();
 
-  const roles = [
-    "Software Engineer",
-    "Full-Stack Developer",
-    "Frontend Developer",
-    "UX/UI Designer",
-    "Usability Engineer",
-  ];
-
   const profileImages = [
-    { src: profile1, caption: "photo 1" },
-    { src: profile2, caption: "photo 2" },
-    { src: profile3, caption: "photo 3" },
+    { src: profile1, caption: "Hello" },
+    { src: profile2, caption: "I love to travel" },
+    { src: profile3, caption: "my friends" },
   ];
-
-  const fullAsciiArt = `⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⢠⡾⠲⠶⣤⣀⣠⣤⣤⣤⡿⠛⠿⡴⠾⠛⢻⡆⠀⠀⠀
-⠀⠀⠀⣼⠁⠀⠀⠀⠉⠁⠀⢀⣿⠐⡿⣿⠿⣶⣤⣤⣷⡀⠀⠀
-⠀⠀⠀⢹⡶⠀⠀⠀⠀⠀⠀⠈⢯⣡⣿⣿⣀⣰⣿⣦⢂⡏⠀⠀
-⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠹⣍⣭⣾⠁⠀⠀
-⠀⣀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⣧⣤⡀
-⠈⠉⠹⣏⡁⠀⢸⣿⠀⠀⠀⢀⡀⠀⠀⠀⣿⠆⠀⢀⣸⣇⣀⠀
-⠀⠐⠋⢻⣅⡄⢀⣀⣀⡀⠀⠯⠽⠂⢀⣀⣀⡀⠀⣤⣿⠀⠉⠀
-⠀⠀⠴⠛⠙⣳⠋⠉⠉⠙⣆⠀⠀⢰⡟⠉⠈⠙⢷⠟⠈⠙⠂⠀
-⠀⠀⠀⠀⠀⢻⣄⣠⣤⣴⠟⠛⠛⠛⢧⣤⣤⣀⡾⠀⠀⠀⠀⠀`;
-
-  // Typewriter effect for ASCII art
-  useEffect(() => {
-    let currentIndex = 0;
-    const typingSpeed = 3; // Speed in milliseconds
-
-    const typeWriter = () => {
-      if (currentIndex < fullAsciiArt.length) {
-        setAsciiText(fullAsciiArt.substring(0, currentIndex + 1));
-        currentIndex++;
-        setTimeout(typeWriter, typingSpeed);
-      }
-    };
-
-    // Start typing after a small delay
-    const startDelay = setTimeout(() => {
-      typeWriter();
-    }, 500);
-
-    return () => clearTimeout(startDelay);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount
 
   useEffect(() => {
     let ticking = false;
@@ -407,64 +363,7 @@ const About = () => {
       }}
     >
       {/* Hero Section */}
-      <div className="py-10 md:py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start max-w-6xl mx-auto gap-8">
-            <div className="text-left w-full md:w-auto">
-              <div className="ascii-container justify-start text-3xl md:text-4xl lg:text-5xl">
-                <AsciiMorphText text="Hi, I'm Carrie Gale" />
-              </div>
-              <div className="hero-subtitle justify-start text-base md:text-lg lg:text-xl mt-2">
-                <div className="flex flex-wrap items-center justify-start">
-                  <span
-                    className={
-                      isDarkMode ? "hero-subtitle-dark" : "hero-subtitle-light"
-                    }
-                  >
-                    I am a&nbsp;
-                  </span>
-                  <TypewriterCarousel
-                    roles={roles}
-                    className={
-                      isDarkMode ? "hero-subtitle-dark" : "hero-subtitle-light"
-                    }
-                  />
-                </div>
-              </div>
-              <div className="hero-buttons flex justify-start gap-3 mt-4">
-                <button
-                  className="hero-action-btn text-sm md:text-base px-4 py-2 md:px-5 md:py-2.5"
-                  onClick={() => {
-                    window.open("/resume.pdf", "_blank");
-                  }}
-                >
-                  Resume →
-                </button>
-                <Link
-                  to="/contact"
-                  className="hero-action-btn text-sm md:text-base px-4 py-2 md:px-5 md:py-2.5"
-                >
-                  Contact →
-                </Link>
-              </div>
-            </div>
-            <div
-              className="hidden md:block"
-              style={{
-                fontSize: "0.8rem",
-                lineHeight: "1",
-                fontFamily: "monospace",
-                minHeight: "150px",
-                color: isDarkMode
-                  ? themeColors.primary
-                  : themeColors.colors.pink[500],
-              }}
-            >
-              <pre>{asciiText}</pre>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Hero />
 
       {/* About Section with Stickers and Journal */}
       <div

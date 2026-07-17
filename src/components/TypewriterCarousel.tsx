@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface TypewriterCarouselProps {
   roles: string[];
@@ -13,16 +13,17 @@ const TypewriterCarousel = ({
   typingSpeed = 100,
   deletingSpeed = 50,
   pauseDuration = 2000,
-  className = ''
+  className = "",
+  //FIXME - add a delayTime to hide this component until AsciiMorphText animation stops
 }: TypewriterCarouselProps) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
-    
+
     if (isPaused) {
       const pauseTimeout = setTimeout(() => {
         setIsPaused(false);
@@ -55,7 +56,16 @@ const TypewriterCarousel = ({
         setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
       }
     }
-  }, [displayText, isDeleting, isPaused, currentRoleIndex, roles, typingSpeed, deletingSpeed, pauseDuration]);
+  }, [
+    displayText,
+    isDeleting,
+    isPaused,
+    currentRoleIndex,
+    roles,
+    typingSpeed,
+    deletingSpeed,
+    pauseDuration,
+  ]);
 
   return (
     <span className={`typewriter ${className}`}>
