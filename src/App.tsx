@@ -4,6 +4,7 @@ import { DarkModeProvider, useDarkMode } from "./contexts/DarkModeContext";
 import { useThemeColors } from "./hooks/useThemeColors";
 import { colors } from "./styles/colors";
 import Navigation from "./components/section/Navigation";
+import Hero from "./components/section/Hero";
 import About from "./components/section/About";
 import { divider } from "./assets";
 import "./App.css";
@@ -27,6 +28,7 @@ function HomePage() {
 
   return (
     <>
+      <Hero />
       <About />
       <Suspense
         fallback={

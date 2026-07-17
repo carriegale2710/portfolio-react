@@ -1,8 +1,8 @@
-# TODO Backlog
+# Backlog
 
-In progress
+## Tasks
 
-- [ ] Finish customisation instruction on README
+- [/] Finish customisation instruction on README
   - [x] Personal info
   - [x] Resume
   - [x] Social Links
@@ -13,23 +13,22 @@ In progress
   - [ ] Profile images
   - [ ] Journal image
 
-Up Next
-
+- [/] Modularise components inside About section (hero, journal, modal )
 - [ ] Delete email card from contact page
 - [ ] Comment out certifications section
 - [ ] Deploy with your own domain name and test it works.
 - [ ] Replace email button Contact Page with Contact Form instead (security)
-- [ ] Audit any bugs, slow loading or usability issues with lighthouse
+- [/] Audit any bugs, slow loading or usability issues with lighthouse
 - [ ] Implement at least 2 project pages
 - [ ] Acknowledge cupidity credits for template in footer
 
-Known Issues (See FIXME anchors)
+## Known Issues (See FIXME anchors)
 
 - [ ] Profile Images not showing on the Notebook page, only on image view modal
 - [ ] AsciiMorphText not rendering fullAsciiArt properly?
 - [ ] Typewriter carousel starts to early - maybe hide until
 
-Bonus
+## Bonus
 
 - [ ] Certifications section -> complete azure aws?
 - [ ] Simplify tech stack section

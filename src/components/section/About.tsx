@@ -10,7 +10,6 @@ import {
   profile3,
   stickers as stickerImages,
 } from "../../assets";
-import Hero from "./Hero";
 
 const About = () => {
   const [showProfileModal, setShowProfileModal] = useState(false);
@@ -362,9 +361,6 @@ const About = () => {
         contain: "layout style",
       }}
     >
-      {/* Hero Section */}
-      <Hero />
-
       {/* About Section with Stickers and Journal */}
       <div
         className="py-8 md:py-12"
