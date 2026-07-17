@@ -15,13 +15,13 @@
     - [ ] project icons
     - [ ] project snapshots
     - [ ] routing
-  - [ ] About
-    - [ ] Profile images
+  - [/] About
+    - [/] Profile images
     - [ ] Journal image
 
 - [x] Separate Hero from About section
 - [x] Comment out certifications and About section for now
-- [/] Delete email card from contact page
+- [x] Delete email card from contact page
 
 - [ ] Acknowledge cupidity credits for template in footer
 - [ ] Implement at least 2 project pages
