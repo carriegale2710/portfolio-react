@@ -7,8 +7,8 @@
   - [x] Resume
   - [x] Social Links
   - [x] Github Links
-  - [/] Experience
-  - [ ] Skills
+  - [x] Experience
+  - [/] Skills
   - [/] Projects
     - [x] Gallery cards
     - [ ] project details
