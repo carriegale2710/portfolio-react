@@ -1,14 +1,6 @@
 import { comingSoon } from "@/assets";
 import socialLinks from "@/config/socialLinks";
-
-export type Project = {
-  title: string;
-  description: string;
-  technologies: string[];
-  icon: string;
-  detailsUrl: string;
-  githubUrl: string;
-};
+import type { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {

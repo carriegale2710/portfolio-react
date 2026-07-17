@@ -1,10 +1,4 @@
-export type Experience = {
-  title: string;
-  company: string;
-  location: string;
-  period: string;
-  description: string[];
-};
+import type { Experience } from "@/lib/types";
 
 export const experiences: Experience[] = [
   {

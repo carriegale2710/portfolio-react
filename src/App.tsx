@@ -94,7 +94,7 @@ function HomePage() {
           loading="lazy"
         />
       </div>
-      <Suspense
+      {/* <Suspense
         fallback={
           <div className="h-screen flex items-center justify-center">
             Loading...
@@ -102,7 +102,7 @@ function HomePage() {
         }
       >
         <Skills />
-      </Suspense>
+      </Suspense> */}
       {/* <Suspense
         fallback={
           <div className="h-64 flex items-center justify-center">
