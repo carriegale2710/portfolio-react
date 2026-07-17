@@ -13,14 +13,16 @@
   - [ ] Profile images
   - [ ] Journal image
 
-- [/] Modularise components inside About section (hero, journal, modal )
-- [ ] Delete email card from contact page
-- [ ] Comment out certifications section
-- [ ] Deploy with your own domain name and test it works.
-- [ ] Replace email button Contact Page with Contact Form instead (security)
-- [/] Audit any bugs, slow loading or usability issues with lighthouse
-- [ ] Implement at least 2 project pages
+- [x] Separate Hero from About section
+- [x] Comment out certifications and About section for now
+- [/] Delete email card from contact page
+
 - [ ] Acknowledge cupidity credits for template in footer
+- [ ] Implement at least 2 project pages
+
+- [ ] Deploy with your own domain name and test it works.
+- [/] Audit any bugs, slow loading or usability issues with lighthouse
+- [ ] Replace email button Contact Page with Contact Form instead (security)
 
 ## Known Issues (See FIXME anchors)
 
@@ -32,6 +34,7 @@
 
 - [ ] Certifications section -> complete azure aws?
 - [ ] Simplify tech stack section
+- [ ] turn profile images for journal scrapbook into polaroids (draggable?)
 - [ ] Customise the color template and themes
 - [ ] Customise star decorations
 - [ ] Customise animated stickers
