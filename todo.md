@@ -7,11 +7,17 @@
   - [x] Resume
   - [x] Social Links
   - [x] Github Links
-  - [ ] Tech skills
+  - [ ] Skills
   - [ ] Experience
-  - [ ] Projects
-  - [ ] Profile images
-  - [ ] Journal image
+  - [/] Projects
+    - [x] Gallery cards
+    - [ ] project details
+    - [ ] project icons
+    - [ ] project snapshots
+    - [ ] routing
+  - [ ] About
+    - [ ] Profile images
+    - [ ] Journal image
 
 - [x] Separate Hero from About section
 - [x] Comment out certifications and About section for now
