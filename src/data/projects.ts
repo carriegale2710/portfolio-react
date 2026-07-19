@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "Minesweeper Game",
     description:
-      "Recreate a simplified version of the game Minesweeper to be played in the java console.",
+      "A simplified version of the game Minesweeper to be played in the java console.",
     technologies: ["Java"],
     icon: comingSoon,
     detailsUrl: "/projects/minesweeper",

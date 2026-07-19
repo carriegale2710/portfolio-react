@@ -5,9 +5,10 @@ import { useThemeColors } from "./hooks/useThemeColors";
 import { colors } from "./styles/colors";
 import Navigation from "./components/section/Navigation";
 import Hero from "./components/section/Hero";
-import About from "./components/section/About";
+// import About from "./components/section/About";
 import { divider } from "./assets";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 
 // Lazy load project pages - add your project page imports here
 // Example: const MyProject = lazy(() => import('./pages/projects/MyProject'))
@@ -16,10 +17,10 @@ const Contact = lazy(() => import("./pages/Contact"));
 // Lazy load below-the-fold components for better initial load
 const Projects = lazy(() => import("./components/section/Projects"));
 const Experience = lazy(() => import("./components/section/Experience"));
-const Skills = lazy(() => import("./components/section/Skills"));
-const Certifications = lazy(
-  () => import("./components/section/Certifications"),
-);
+// const Skills = lazy(() => import("./components/section/Skills"));
+// const Certifications = lazy(
+//   () => import("./components/section/Certifications"),
+// );
 const Footer = lazy(() => import("./components/Footer"));
 
 function HomePage() {
@@ -163,6 +164,7 @@ function App() {
   return (
     <DarkModeProvider>
       <AppContent />
+      <Analytics />
     </DarkModeProvider>
   );
 }
