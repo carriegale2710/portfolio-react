@@ -9,6 +9,7 @@ import Hero from "./components/section/Hero";
 import { divider } from "./assets";
 import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Lazy load project pages - add your project page imports here
 // Example: const MyProject = lazy(() => import('./pages/projects/MyProject'))
@@ -165,6 +166,7 @@ function App() {
     <DarkModeProvider>
       <AppContent />
       <Analytics />
+      <SpeedInsights />
     </DarkModeProvider>
   );
 }
